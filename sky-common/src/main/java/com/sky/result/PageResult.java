@@ -1,5 +1,6 @@
 package com.sky.result;
 
+import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -14,9 +15,9 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class PageResult implements Serializable {
-
-    private long total; //总记录数
-
+    //总记录数
+    @ApiModelProperty("总记录数")
+    private long total;
+    @ApiModelProperty("当前页数据集合")
     private List records; //当前页数据集合
-
 }
